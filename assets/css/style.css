@@ -1,0 +1,811 @@
+/* border: 1px solid gold !important; */
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* optional */
+}
+
+body {
+    overflow-x: hidden !important;
+    background-image: var(--gradient-body);
+    font-family: 'Prata', serif;
+}
+
+:root {
+    --first-color: #313131;
+    --second-color: #1a191a;
+    --hero-first-color: #1b1b1c;
+    --hero-second-color: #333334;
+    --gradient-header: linear-gradient(170deg, var(--first-color) 0%, var(--second-color) 100%);
+    --gradient-hero: linear-gradient(-64deg, var(--hero-first-color) 0%, var(--hero-second-color) 100%);
+
+    --golden-color: #fcd462;
+    --golden-shadow-color: #f9be1cdd;
+    --golden-text-color: #fecc45;
+    --golden-border: #f4c135;
+    --golden-btn-color: #f6d574;
+
+    --text-color: #f0f0f0;
+    --text-bright: #fff;
+    --text-low: #ccc;
+    --body-background-1: #ffffff;
+    --body-background-2: #fafeff;
+    --image-gap-color1: #D2DDEA;
+    /* --image-gap-color1: #d4dde9; */
+    /* #f8eaeb */
+    --image-gap-color2: #DFDFDF;
+    /* --image-gap-color2: #dfdfdf; */
+    /* #fbf7f5; */
+    /* --glow-color1: #E4EAF2; old*/
+    --glow-color1: #e3e9f2; 
+    /* #ffaee050 */
+    --glow-color2: #c6c7c7c5;
+    /* #fec37a50 */
+    /* same as above but some minor changes by me */
+
+    --shadow-color: #d4dde9;
+    /*  #ffd8a8a2; */
+    --shadow-color-2: #d4dde9ee;
+    /* #a17c4fa2; */
+
+    --gradient-image-gap: linear-gradient(220deg, var(--image-gap-color1), var(--image-gap-color2));
+    --gradient-body: linear-gradient(270deg, var(--body-background-1) 0%, var(--body-background-2) 100%);
+
+
+    /* ============== Fonts & Sizes ================ */
+    font-family: 'Prata', serif;
+    /* write here */
+}
+
+/* =========== Reusable ========== */
+/* =========== Reusable ========== */
+/* =========== Reusable ========== */
+/* =========== Reusable ========== */
+/* =========== Reusable ========== */
+.section {
+    margin-bottom: 80px;
+}
+
+.golden-btn {
+    color: var(--first-color) !important;
+    padding: .6rem 1.3rem !important;
+    font-weight: 600 !important;
+    border-radius: .7rem !important;
+    background-color: var(--golden-btn-color) !important;
+}
+
+.golden-btn:hover {
+    color: var(--golden-btn-color) !important;
+    background-color: transparent !important;
+    border: 1px solid var(--golden-btn-color);
+}
+
+.right-arrow {
+    transition: all .3s ease-out;
+    position: relative;
+    top: -1px;
+    left: 1px;
+}
+
+.golden-btn:hover .right-arrow {
+    left: .3rem;
+}
+
+.inside-section-gap {
+    margin: 4rem 0;
+}
+
+.rotated {
+    transform: rotateZ(-8deg);
+}
+
+.navbar-brand {
+    height: 3rem;
+    width: fit-content;
+}
+
+.navbar-brand img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* =========== HEADER ============ */
+/* =========== HEADER ============ */
+/* =========== HEADER ============ */
+/* =========== HEADER ============ */
+/* =========== HEADER ============ */
+.header-section {
+    z-index: 10;
+    background-color: var(--second-color);
+    background-image: var(--gradient-header);
+    height: 80px;
+    display: flex;
+    /* align-items: center; */
+    max-width: -webkit-fill-available;
+    flex-wrap: nowrap;
+}
+
+.header-section .container {
+    justify-content: space-between;
+    margin: auto;
+}
+
+.navbar-brand {
+    color: var(--text-bright) !important;
+}
+
+.nav-item {
+    margin: 0 .5rem;
+    padding: 0 .8rem;
+    border-radius: 1rem;
+    transition: background-color .3s ease-out;
+}
+
+.nav-item:hover {
+    background-color: var(--hero-second-color);
+}
+
+.nav-item:hover a.nav-link {
+    color: var(--text-bright) !important;
+}
+
+.nav-item a.nav-link {
+    color: var(--text-low) !important;
+}
+
+.nav-item a.nav-link.active {
+    color: var(--text-color) !important;
+}
+
+
+
+/* ============= Hero Section ============ */
+/* ============= Hero Section ============ */
+/* ============= Hero Section ============ */
+/* ============= Hero Section ============ */
+/* ============= Hero Section ============ */
+.hero-section {
+    position: relative;
+}
+
+.hero-background {
+    height: 900px;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(170deg, #1b1b1c 60%, #3f3f3f 100%);
+    transform: rotateZ(0deg) skewY(-0.15rad);
+    top: -35px;
+    left: 0;
+    overflow-x: hidden;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-background img {
+    opacity: .3;
+    position: absolute;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    /* left: -.8rem; */
+    top: 0;
+    background-blend-mode: darken;
+    height: 100%;
+    filter: hue-rotate(250deg) saturate(0);
+}
+
+.hero-content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h2 {
+    font-size: 5rem;
+    margin: 4rem 0;
+    color: var(--text-color);
+    /* color: black; */
+}
+
+.hero-content .hero-image {
+    margin-top: 2rem;
+    height: 600px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+
+
+
+/* ================= INFO TABLE ================== */
+/* ================= INFO TABLE ================== */
+/* ================= INFO TABLE ================== */
+/* ================= INFO TABLE ================== */
+/* ================= INFO TABLE ================== */
+
+.info-table {
+    display: flex;
+    background-color: var(--text-bright);
+    justify-content: center;
+    box-shadow: 0 0 50px var(--shadow-color);
+    border-radius: 1rem;
+    /* height: 150px; */
+    align-items: center;
+}
+
+.info-table-content {
+    padding: 2.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    /* column-gap: 5rem; */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.info-box {
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+/* right vertical line each after the box */
+
+.info-box::after {
+    /* border: 1px solid red; */
+    position: absolute;
+    content: "";
+    background-color: var(--text-low);
+    height: 100%;
+    opacity: .2;
+    top: 0;
+    /* right: -80px; */
+    left: 170%;
+    width: 1px;
+}
+
+.info-box:nth-child(2)::after {
+    width: 0.5px;
+    left: 190%;
+}
+
+.info-box:nth-child(3)::after {
+    left: 130%;
+}
+
+.info-box:nth-child(4)::after {
+    opacity: 0;
+}
+
+.info-box h1 {
+    background: -webkit-linear-gradient(45deg, #ffd45d 30%, #c55500 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.info-box h1::after {
+    background: -webkit-linear-gradient(45deg, #ffd45d 30%, #c55500 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    content: "+";
+    position: absolute;
+    font-size: 3rem;
+    top: -20%;
+    /* margin-left: .15em; */
+}
+
+
+
+
+/* ================ WHAT SECTION ================= */
+/* ================ WHAT SECTION ================= */
+/* ================ WHAT SECTION ================= */
+/* ================ WHAT SECTION ================= */
+/* ================ WHAT SECTION ================= */
+/* ================ WHAT SECTION ================= */
+.what-section .what-left h2 {
+    font-size: 3.5rem;
+}
+
+.what-section .what-right p {
+    font-size: 1.1rem;
+}
+
+/* .what-box-content {
+    padding: 0;
+    position: relative;
+    z-index: -10;
+    border-radius: 7rem;
+} */
+
+.what-img-box .box-inner {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.img-above-features img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/* ====================== features section ======================== */
+/* ====================== features section ======================== */
+/* ====================== features section ======================== */
+/* ====================== features section ======================== */
+/* ====================== features section ======================== */
+
+.features-section {
+    background-image: var(--gradient-body);
+    position: relative;
+}
+
+.features-section .background-overlay {
+    background-image: url(../images/reference/bg/bg-line-v7.png);
+    background-size: contain;
+    z-index: 10;
+    padding-bottom: 8rem;
+}
+
+.features-heading h2 {
+    font-size: 3rem;
+}
+
+.box-content {
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0px 60px 0px var(--shadow-color);
+    z-index: 10;
+}
+
+.box-content .box-inner {
+    padding: 3rem;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    /* align-self: center; */
+}
+
+.box-left-container {
+    width: 45%;
+    padding: 1rem;
+    z-index: 10;
+
+}
+
+.box-right-container {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    z-index: 10;
+
+    align-items: center;
+}
+
+.vertical-box-container {
+    padding-right: .8rem;
+}
+
+.vertical-box-container.box-2 {
+    padding-left: .8rem;
+    padding-right: 0;
+}
+
+.box-icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 1.5rem;
+}
+
+.box-icon img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.box-right-container .box-image-outside {
+    border-radius: 2rem;
+    padding: .5rem;
+    z-index: 10;
+    overflow: hidden;
+    background-image: var(--gradient-image-gap);
+}
+
+.box-image-inside {
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    width: 100%;
+    position: relative;
+    z-index: -10;
+}
+
+.box-image-inside img {
+    z-index: -10;
+    width: 100%;
+    border-radius: 5rem;
+}
+
+.features-info-box h3 {
+    font-weight: 700;
+}
+
+.features-info-link a {
+    text-decoration: none !important;
+    color: blueviolet;
+    transition: all .3s;
+    position: relative;
+    font-weight: 700;
+}
+
+.features-info-link a::after {
+    transform: translateX(-50%);
+    background: blueviolet;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    content: "";
+    height: 3px;
+    left: 50%;
+}
+
+.features-info-link a span {
+    position: relative;
+    font-size: 1.5rem;
+    top: 3px;
+}
+
+
+
+/* ==================== WHY SECTION ============ */
+/* ==================== WHY SECTION ============ */
+/* ==================== WHY SECTION ============ */
+/* ==================== WHY SECTION ============ */
+/* ==================== WHY SECTION ============ */
+
+
+.why-section {
+    margin-bottom: 10rem;
+}
+
+.why-box-wrapper {
+    justify-content: space-around;
+    margin: 4rem auto;
+    row-gap: 3rem;
+}
+
+.why-box-wrapper .box-sub-heading {
+    width: 80%;
+    margin: auto;
+}
+
+.box-sub-heading h5{
+    font-size: 1.1rem;
+}
+
+.why-box .box-icon img {
+    box-shadow: 0 5px 35px -7px var(--shadow-color-2);
+}
+
+/* ==================== get started bottom ============ */
+/* ==================== get started bottom ============ */
+/* ==================== get started bottom ============ */
+/* ==================== get started bottom ============ */
+/* ==================== get started bottom ============ */
+
+.get-started-section {
+    width: 100%;
+}
+
+.get-started-background-img {
+    position: absolute;
+    top: 0;
+    background: black;
+    left: 0;
+    background-image: url("../images/reference/bg/bg-hero-v4.png");
+    filter: saturate(0);
+    height: 100%;
+    transform: skewY(-5deg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+.background-get-started {
+    /* background-image: var(--gradient-header); */
+    padding: 10rem 25rem;
+    margin: 0 0 10rem 0;
+    position: relative;
+    color: #fff;
+    /* transform: rotateZ(-7deg) translateX(0px); */
+}
+
+.get-started-content {
+    /* transform: skewY(4.9deg); */
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 40%;
+    /* transform: rotateZ(7deg); */
+}
+
+.background-get-started::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: .5;
+    width: 100%;
+    background-position: center;
+    overflow: visible;
+    /* background-image: url("../images/reference/bg/bg-hero-v4.png"); */
+    /* transform: skew(-7deg); */
+    /* filter: saturate(0.1); */
+    /* z-index: 10; */
+}
+
+.get-started-content .get-started-heading {
+    margin-bottom: 3rem;
+}
+
+
+/* border: 1px solid gold !important; */
+
+/* **************************** glow animation ****************************** */
+/* **************************** glow animation ****************************** */
+/* **************************** glow animation ****************************** */
+/* **************************** glow animation ****************************** */
+/* **************************** glow animation ****************************** */
+
+.features-element-wrapper {
+    z-index: 10;
+    position: relative;
+}
+
+.features-element-box-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+.animation-glow-1::before {
+    box-shadow: 0 0 600px 600px var(--glow-color1);
+    animation-iteration-count: infinite;
+    animation-name: appearance;
+    animation-duration: 5s;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    opacity: .2;
+    right: 10%;
+    top: 0%;
+}
+
+.animation-glow-2::before {
+    box-shadow: 0 0 600px 600px var(--glow-color1);
+    animation-iteration-count: infinite;
+    animation-name: appearance;
+    animation-duration: 5s;
+    border-radius: 50%;
+    position: absolute;
+    border: none;
+    content: "";
+    opacity: .2;
+    left: -5%;
+    height: 0;
+    width: 0;
+    top: 45%;
+}
+
+.animation-glow-3::before {
+    box-shadow: 0 0 600px 500px var(--glow-color1);
+    animation-iteration-count: infinite;
+    animation-name: appearance;
+    animation-duration: 5s;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    opacity: .2;
+    right: 5%;
+    top: 70%;
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0.2;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+
+
+/* ================= Footer ===================== */
+/* ================= Footer ===================== */
+/* ================= Footer ===================== */
+/* ================= Footer ===================== */
+/* ================= Footer ===================== */
+/* ================= Footer ===================== */
+
+.footer-section i {
+    font-size: 1rem !important;
+}
+
+.footer-section a{
+    text-decoration: none !important;
+    color: #404040;
+    
+}
+.footer-section a:hover{
+    color: black;
+}
+
+.footer-section .diyora-logo {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.diyora-logo img {
+    height: 3rem;
+    width: 9.8rem;
+}
+
+.below-logo {
+    width: 100%;
+    margin: .3rem auto;
+    text-align: left;
+}
+
+.social-links div {
+    margin-right: 1.2rem;
+}
+
+.social-links i {
+    border-radius: 50%;
+    padding: .5rem;
+    background-color: #ccc;
+}
+
+.footer-2 {
+    padding-left: 5rem !important;
+}
+
+.footer-2 .links-in-footer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-2 .links-in-footer a {
+    padding-top: .3rem;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-3 {
+    padding-left: 3rem !important;
+}
+
+.footer-3 p {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.footer-3 i {
+    margin-right: .5rem;
+    transform: translateY(1px);
+    font-size: 1rem !important;
+}
+
+.footer-3 span {
+    display: flex;
+    align-items: center;
+}
+
+.footer-3 div {
+    margin-top: .3rem;
+}
+
+
+
+
+
+
+/* ********************************************************************************************************************************************************************** */
+/* ********************************************************************************************************************************************************************** */
+/* *********************************************************************        ***************************************************************************************** */
+/* *********************************************************************        ***************************************************************************************** */
+/* *********************************************************************        ***************************************************************************************** */
+/* *********************************************************************        ***************************************************************************************** */
+/* *********************************************************************        ***************************************************************************************** */
+/* *********************************************************************        ***************************************************************************************** */
+/* *********************************************************************        **************************************************************************************** */
+/* *********************************************************************        *********************************************************************************** */
+/* *****************************    **********      ****  R E S P O N S I V E   Q U E R I E S  ****      **********    **************************************** */
+/* *********************************    **********      ***************************************      **********    **************************************** */
+/* *************************************    **********      *******************************      **********    **************************************** */
+/* *****************************************    **********      ************************      **********    **************************************** */
+/* *********************************************    **********      ****************      **********    **************************************** */
+/* *************************************************    **********      ********      **********    **************************************** */
+/* *****************************************************    **********            **********    **************************************** */
+/* *********************************************************    **********    **********    **************************************** */
+/* *************************************************************     **************     **************************************** */
+/* *****************************************************************     ******     **************************************** */
+/* *********************************************************************        **************************************** */
+
+
+@media screen and (max-width: 991px) {
+    button.navbar-toggler {
+        filter: invert(1);
+    }
+
+    .hero-content h2{
+        font-size: 4rem;
+    }
+
+    .info-table-content{
+        padding: 2rem 3.5rem;
+    }
+
+    .info-box h1{
+        font-size: 2rem;
+    }
+    .info-box h1::after{
+        font-size: 2rem;
+    }
+
+    .info-box h6{
+        font-size: .9rem;
+    }
+
+    .info-box::after, .info-box:nth-child(2)::after{
+        left: 117%;
+    }
+    .info-box:nth-child(3)::after{
+        left: 110%;
+    }
+    
+
+
+
+
+
+}
