@@ -1,6 +1,5 @@
 /* border: 1px solid gold !important; */
 
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;300;400;500;600;700&display=swap');
 
 * {
@@ -16,7 +15,6 @@ html {
 
 body {
     overflow-x: hidden !important;
-    /* background-image: var(--gradient-body); */
     background-color: #fff;
     font-family: 'Urbanist', sans-serif !important;
 
@@ -64,10 +62,6 @@ body {
 
 
     /* ============== Fonts & Sizes ================ */
-    /* font-family: 'Prata', serif; */
-
-
-    /* write here */
 }
 
 /* =========== Reusable ========== */
