@@ -86,15 +86,11 @@ body {
 }
 
 .golden-btn-normal {
-    position: relative;
     color: var(--first-color) !important;
     padding: .6rem 1.3rem !important;
     font-weight: 700 !important;
     border-radius: .7rem !important;
     background-color: var(--golden-btn-color) !important;
-    overflow: hidden;
-    z-index: 1;
-    transition: all 1s ease-in-out;
 }
 
 
