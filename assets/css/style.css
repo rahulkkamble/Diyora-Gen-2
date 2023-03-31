@@ -218,7 +218,7 @@ body {
     width: 100%;
     position: absolute;
     background-image: linear-gradient(170deg, #1b1b1c 60%, #3f3f3f 100%);
-    transform: rotateZ(0deg) skewY(-0.15rad);
+    transform: rotateZ(0deg) skewY(-0.11rad);
     top: -35px;
     left: 0;
     overflow-x: hidden;
@@ -338,6 +338,7 @@ body {
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
     position: relative;
+    right: 5%;
     font-weight: 500;
 }
 
@@ -888,6 +889,15 @@ body {
     .hero-background{
         height: 1050px;
     }
+    .info-box::after{
+        left: 134%;
+    }
+    .info-box:nth-child(2)::after {
+        left: 145%;
+    }
+    .info-box:nth-child(3)::after {
+        left: 125%;
+    }
 }
 
 
@@ -1126,16 +1136,22 @@ body {
         column-gap: .6rem;
     }
     .info-box h1 {
-        font-size: 1.3rem;
+        font-size: 1rem;
+    }
+    .info-box h6{
+        font-size: .8rem;
     }
     .info-box h1::after {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
-    .info-box::after, .info-box:nth-child(2)::after {
-        left: 127%;
+    .info-box::after {
+        left: 105%;
+    }
+    .info-box:nth-child(2)::after{
+        left: 115%;
     }
     .info-box:nth-child(3)::after {
-        left: 120%;
+        left: 105%;
     }
 
     .what-section h2,
@@ -1154,4 +1170,16 @@ body {
         width: 65%;
     }
 
+}
+
+@media screen and (max-width: 380px){
+    .info-box h1,.info-box h1::after {
+        font-size: .7rem;
+    }
+    .info-box h6{
+        font-size: .7rem;
+    }
+    /* .info-box::after {
+        left: 105%;
+    } */
 }
