@@ -332,21 +332,41 @@ body {
 }
 
 .info-box h1 {
-    background: -webkit-linear-gradient(45deg, #ffd45d 30%, #c55500 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 3rem;
     position: relative;
     right: 5%;
     font-weight: 500;
 }
-
-.info-box h1::after {
-    background: -webkit-linear-gradient(45deg, #ffd45d 30%, #c55500 100%);
+.info-box:nth-child(1) h1,
+.info-box:nth-child(1) h1::after{
+    background: -webkit-linear-gradient(45deg, #Feca31, #fdc833);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.info-box:nth-child(2) h1,
+.info-box:nth-child(2) h1::after{
+    background: -webkit-linear-gradient(45deg, #f9bd3b, #f6b442);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.info-box:nth-child(3) h1,
+.info-box:nth-child(3) h1::after{
+    background: -webkit-linear-gradient(45deg, #f2a84b, #ef9f53);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.info-box:nth-child(4) h1,
+.info-box:nth-child(4) h1::after{
+    background: -webkit-linear-gradient(45deg, #eb925d, #e98d61);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info-box h1::after {
     content: "+";
     position: absolute;
     font-size: 3rem;
@@ -435,6 +455,7 @@ body {
 
 .box-content {
     border-radius: 2rem;
+    position: sticky;
     background-color: #fff;
     box-shadow: 0 0px 60px 0px var(--shadow-color);
     z-index: 10;
@@ -803,7 +824,7 @@ body {
 .social-links a:hover i{
     /* padding: .55rem; */
     filter: invert(1);
-    border-radius: 30%;
+    /* border-radius: 30%; */
 }
 
 .social-links i {
@@ -902,7 +923,7 @@ body {
 }
 
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     .navbar-nav{
         background: var(--gradient-header);
         margin-top: 1.5rem;
@@ -1038,7 +1059,7 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
     .hero-content h2 {
         width: 80%;
         font-size: 3rem;
@@ -1122,7 +1143,7 @@ body {
     }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 575.98px){
 
     .hero-content .hero-image {
         height: 100%;
