@@ -3,7 +3,7 @@ const sr = ScrollReveal({  /* capital S in ScrollReveal */
     origin: 'bottom',
     distance: '80px',
     duration: 1300,
-    reset: true   /* for repeat animation */
+    reset: false   /* for repeat animation */
 })
 
 sr.reveal(`.hero-image`)
