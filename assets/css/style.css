@@ -802,6 +802,7 @@ body {
 
 .social-links a:hover i{
     /* padding: .55rem; */
+    filter: invert(1);
     border-radius: 30%;
 }
 
