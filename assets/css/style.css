@@ -1137,5 +1137,8 @@ body {
     .box-sub-heading h5 {
         font-size: 1rem;
     }
+    .get-started-content{
+        width: 70%;
+    }
 
 }
