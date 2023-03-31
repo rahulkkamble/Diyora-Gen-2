@@ -1140,5 +1140,8 @@ body {
     .get-started-content{
         width: 70%;
     }
+    .why-box-wrapper .box-sub-heading {
+        width: 65%;
+    }
 
 }
