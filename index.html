@@ -59,8 +59,10 @@
                             <a class="nav-link" href="#getStarted">Contact Us</a>
                         </li>
                     </ul>
-                    <div class="my-2 my-lg-0"><button class="btn golden-btn-normal my-2 my-sm-0" type="submit">Get
-                            Started</button>
+                    <div class="my-2 my-lg-0"><a href="https://diyorajewellery.in/login" target="_blank"
+                            class="btn golden-btn-normal my-2 my-sm-0" type="submit">Login</a>
+                        <!-- <div class="my-2 my-lg-0"><button class="btn golden-btn-normal my-2 my-sm-0"
+                            type="submit">Login</button> -->
                     </div>
                 </div>
             </nav>
@@ -71,18 +73,16 @@
 
     <!-- ============== HERO SECTION ================== -->
     <div class="hero-background container-fluid">
-        <!-- <img src="https://picsum.photos/1600/800" alt=""> -->
-        <!-- <img class="bg-hero-1" src="./assets/images/reference/bg/bg-gradient-blur.jpg" alt=""> -->
         <img class="bg-hero-2" src="./assets/images/reference/bg/bg-hero-v4.png" alt="">
-
     </div>
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
                 <h2>Entice customers with modern jewellery shopping experience</h2>
-                <a href="" class="btn golden-btn">Get Started <span class="right-arrow">&#8594</span></a>
+                <button class="btn golden-btn" data-toggle="modal" data-target="#staticBackdrop">Get Started
+                    <span class="right-arrow">&#8594</span></button>
                 <div class="hero-image">
-                    <img src="./assets/images/new/2nd-Kiosk.png" alt="" srcset="">
+                    <img src="./assets/images/new/2nd-Kiosk.png" alt="hero-kiosk" srcset="">
                 </div>
             </div>
         </div>
@@ -360,7 +360,8 @@
                     Ready to attract more customers
                     to your jewellery store?
                 </h1>
-                <a href="#" class="btn golden-btn">Get Started <span class="right-arrow">&#8594</span></a>
+                <a href="#" class="btn golden-btn" data-toggle="modal" data-target="#staticBackdrop">Get Started <span
+                        class="right-arrow">&#8594</span></a>
             </div>
         </div>
     </section>
@@ -376,22 +377,29 @@
                     <img src="./assets/images/NXT-logo.png-black.png" alt="">
                 </div>
                 <div class="below-logo mt-2">
-                    <p>Lorem ipsum dolor sit amet, consecteturquibusdam et fugit nam.</p>
+                    <p>Diyora is your ultimate destination for fine jewellery with strikingly elegant designs. Our
+                        jewellery is made with utmost care, precision and artistry.
+                    </p>
+                    <p>The epitome of craftsmanship. Diyora goes beyond gender and age which means it has something for
+                        every taste and look.</p>
                 </div>
                 <div class="social-links mt-4 d-flex below-logo">
                     <div class="fb">
-                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/people/DiyoraNxt/100088155431561/"><i
+                                class="ri-facebook-fill"></i></a>
                     </div>
                     <div class="tw">
-                        <a href="#">
+                        <a target="_blank" href="https://twitter.com/DiyoraNXT">
                             <i class="ri-twitter-fill"></i>
                         </a>
                     </div>
                     <div class="insta">
-                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/diyoranxt/"><i
+                                class="ri-instagram-line"></i></a>
                     </div>
                     <div class="in">
-                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/diyoranxt/"><i
+                                class="ri-linkedin-fill"></i></a>
                     </div>
                 </div>
             </div>
@@ -405,21 +413,71 @@
             </div>
             <div class="col-md-4 footer-3">
                 <h5>Contact Us</h5>
-                <p>Plot no 1 to 4, Opp. Devaji Nagar Society,
-                    Ashwini kumar Rd, Devaji Nagar Part-2,
-                    Surat, Gujrat 395008
+                <p>Andheri office: B1, Vinmar House, Road, No.2, MIDC Central Road, near Marol, Andheri East, Mumbai,
+                    Maharashtra - 400093
+
                 </p>
                 <div class="footer-phone-number">
-                    <span><i class="ri-phone-fill"></i> <a href="tel:+0261 309 3000">0261 309 3000</a></span>
+                    <span><i class="ri-phone-fill"></i> <a href="tel:+9974345063">+91 99743 45063</a></span>
                 </div>
                 <div class="footer-email">
-                    <span><i class="ri-mail-fill"></i> <a href="mailto:support@diyora.com">support@diyora.com</a></span>
+                    <span><i class="ri-mail-fill"></i> <a
+                            href="mailto:support@diyoranxt.com">support@diyoranxt.com</a></span>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- =================== MODAL Get started ============================= -->
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Background Image -->
+                <img class="modal-background" src="./assets/images/reference/bg/bg-hero-v4.png"
+                    alt="background-overlay">
+                <div class="modal-header d-flex">
+                    <h5 class="modal-title ml-auto text-center color-gold" id="staticBackdropLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="color-gold">&times;</span>
+                    </button>
+                </div>
 
+                <div class="modal-body">
+                    <div class="container">
+                        <form class="d-flex row" id="modalForm"> <!-- action="/action_page.php"  -->
+                            <div class="col-md-6">
+                                <div class="w-100 my-3 ">
+                                    <input type="text" class="form-control" placeholder="Full name" required>
+                                </div>
+                                <div class="w-100 my-3 ">
+                                    <input type="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="w-100 my-3 ">
+                                    <input type="tel" class="form-control" placeholder="Mobile Number" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group w-100 my-3">
+                                    <textarea class="form-control pb-3 pt-2" id="exampleFormControlTextarea1" rows="5"
+                                        placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center ml-auto mr-3">
+                                <input type="submit"
+                                    class="btn golden-btn-normal btn-secondary w-100 px-5 py-2 ml-auto my-3"></input>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ========== BOOTSTRAP 4.6 =========== -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

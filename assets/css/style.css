@@ -73,6 +73,10 @@ body {
     margin-bottom: 80px;
 }
 
+.color-gold{
+    color: var(--golden-color);
+}
+
 .golden-btn {
     position: relative;
     color: var(--first-color) !important;
@@ -110,11 +114,11 @@ body {
 
 .golden-btn:hover,
 .golden-btn-normal:hover,
-.golden-btn:active,
-.golden-btn-normal:active {
+.golden-btn:focus,
+.golden-btn-normal:focus {
     color: var(--golden-btn-color) !important;
     background-color: transparent !important;
-    border: 1px solid var(--golden-btn-color);
+    border: 1px solid var(--golden-btn-color) !important;
 }
 
 .golden-btn:hover::before,
@@ -1204,4 +1208,53 @@ body {
     /* .info-box::after {
         left: 105%;
     } */
+}
+
+
+/* ********************************** Get started Modal ************************************** */
+.modal-footer, .modal-header{
+    border: none !important;
+}
+.modal-header{
+    /* border-bottom: 1px solid var(--glow-color2) !important; */
+    background: var(--gradient-header);
+}
+.modal-header .close{
+    padding: 1rem 1rem 1rem 0 !important;
+}
+.modal-content{
+    border-radius: .3rem !important;
+    border: none !important;
+    background: var(--gradient-hero) !important;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+#staticBackdrop .modal-dialog .modal-content,
+.modal-content button.close{
+    color: white;
+}
+
+#modalForm label{
+    margin-top: .7rem;
+}
+
+#modalForm input.form-control,
+#modalForm textarea{
+    background:var(--gradient-body);
+    color: black;
+    font-weight: 500;
+    resize: none;
+}
+
+.form-group{
+    margin-bottom: 0.5rem !important;
+}
+img.modal-background{
+    position: absolute;
+    width: 100%;
+    filter: saturate(0%);
+    z-index: -1;
 }
