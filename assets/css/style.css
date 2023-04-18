@@ -183,6 +183,11 @@ body {
     color: var(--text-bright) !important;
 }
 
+.navbar-brand img{
+    filter: invert(1);
+    scale: 1.4;
+}
+
 .nav-item {
     margin: 0 .5rem;
     padding: 0 .8rem;
@@ -612,6 +617,8 @@ body {
 /* ==================== get started bottom ============ */
 
 .get-started-section {
+    overflow: hidden;
+    padding: 3.5rem 0;
     width: 100%;
 }
 
@@ -623,10 +630,56 @@ body {
     background-image: url("../images/reference/bg/bg-hero-v4.png");
     filter: saturate(0);
     height: 100%;
-    transform: skewY(-5deg);
+
+    transform: skewY(-5deg) scaleX(1);
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: cover;
+    /* animation-name: bounce;animation-duration: 4s;  */
+    
+    animation-name: breath;animation-duration: 10s; 
+    animation-iteration-count: infinite;
+    /* background-repeat: repeat-x; */
+    /* background-position: -600% -20%; */
+    
+}
+
+@keyframes breath{
+    0%{
+        transform: skewY(-5deg) scaleX(1);
+    }
+    20%{
+        transform: skewY(-3deg) scaleX(1.2);
+        /* background-position: 20%; */
+    }
+    40%{
+        transform: skewY(-4deg) scaleX(1);
+    }
+    70%{
+        transform: skewY(-3deg) scaleX(1.2);
+        /* background-position: -40%; */
+    }
+    100%{
+        transform: skewY(-5deg) scaleX(1);
+    }
+}
+
+@keyframes up-down{
+    0%{
+        transform: skewY(-5deg) scaleX(1.2);
+    }
+    20%{
+        transform: skewY(-3deg) scaleX(1.4);
+        /* background-position: 20%; */
+    }
+    40%{
+        transform: skewY(-4deg) scaleX(1);
+    }
+    70%{
+        transform: skewY(-3deg) scaleX(1.4);
+        /* background-position: -40%; */
+    }
+    100%{
+        transform: skewY(-5deg) scaleX(1.2);
+    }
 }
 
 .background-get-started {
@@ -806,13 +859,12 @@ body {
 }
 
 .footer-section .diyora-logo {
-    width: 100%;
-    margin: 0 auto;
+    width: 9rem;
+    margin: 0 0 1.5rem 0;
 }
 
 .diyora-logo img {
-    height: 2.8rem;
-    width: 9.8rem;
+    width: 100%;
 }
 
 .below-logo {
@@ -1060,10 +1112,18 @@ body {
     .footer-3 p{
         margin-bottom: 0;
     }
+    .modal{
+        width: 100% !important;
+    }
 }
 
 
 @media screen and (max-width: 767.98px) {
+
+    .navbar-brand img{
+        scale: 1;
+    }
+
     .hero-content h2 {
         width: 80%;
         font-size: 3rem;
@@ -1195,6 +1255,7 @@ body {
     .why-box-wrapper .box-sub-heading {
         width: 65%;
     }
+
 
 }
 
